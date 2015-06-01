@@ -16,7 +16,7 @@ define(['angular'], function (angular) {
 		return {
 			fetchPhotos: function(callback){
 				var endpoint = 'https://api.instagram.com/v1/users/' + userId + '/media/recent/?';
-				endpoint += '?count=99';
+				endpoint += '?count=6';
 				endpoint += '&client_id=' + clientId;
 				endpoint += '&callback=JSON_CALLBACK';
 				$http.jsonp(endpoint).success(function(response){

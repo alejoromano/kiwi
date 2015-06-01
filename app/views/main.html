@@ -37,19 +37,13 @@
 	<section id="social">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-offset-2 col-sm-8">
-					<div class="row">
-						<div class="col-sm-6">
-								<ul>
-									<li ng-repeat="p in pics">
-											<a href="{{p.link}}" target="_blank"><img ng-src="{{p.images.low_resolution.url}}" /></a>
-									</li>
-								</ul>
+				<div class="col-sm-offset-2 col-sm-4">
+						<div ng-repeat="p in pics" class="col-xs-6">
+								<a href="{{p.link}}" target="_blank"><img ng-src="{{p.images.low_resolution.url}}" class="img-responsive" /></a>
 						</div>
-						<div class="col-sm-6">
-							Social Section
-						</div>
-					</div>
+				</div>
+				<div class="col-sm-4">
+					Social Section
 				</div>
 			</div>
 		</div>
