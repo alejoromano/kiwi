@@ -1,0 +1,118 @@
+@white:#fff;
+@dark-blue: #053d68;
+@sky-blue: #effdff;
+@bk-color: #ff684f;
+@pink: #fffaf3;
+@import "mixins/buttons.less";
+@import "type.less";
+@import "home.less";
+@import "contact.less";
+
+.browsehappy {
+	margin: 0.2em 0;
+	background: #ccc;
+	color: #000;
+	padding: 0.2em 0;
+}
+
+body {
+	background: @bk-color;
+	color:@white;
+	font-family: 'TypoPRO Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.footer {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+/* Custom page header */
+.header .navbar {
+	background: transparent;
+	border: none;
+	margin: 0;
+	min-height: 0;
+}
+.navbar-default .navbar-toggle {
+	background: none;
+	border: none;
+	margin: 2em 0 0 0;
+	padding: .715em;
+	&:hover,
+	&:focus {
+		background: fade(@white, 20%);
+	}
+	.icon-bar {
+		background: @white;
+		width: 3em;
+		height: .286em;
+	}
+	.icon-bar + .icon-bar {
+		margin-top: .286em;
+	}
+}
+.navbar-default .navbar-collapse {
+	border: none;
+}
+.navbar > .container-fluid .navbar-brand {
+	padding: 0;
+	margin: 0;
+	height: auto;
+}
+.navbar-default .navbar-nav > li > a {
+	font-size:1.286em;
+	line-height: 5em;
+	font-weight: 900;
+	text-transform: uppercase;
+	padding: 0 1em;
+	color: @white;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+	color: fade(@white, 80%);
+	background: none;
+}
+
+/* Custom page footer */
+.footer {
+	padding: 5em 0;
+	color: @white;
+}
+.bottom-footer {
+	padding: 3em 0;
+	background: @white;
+	color: @dark-blue;
+	#hash {
+		text-align: left;
+	}
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+	/* Remove the padding we set earlier */
+	.header,
+	.footer {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	/* Space out the masthead */
+	.header {
+		padding-top: 3em;
+		padding-bottom: 2em;
+	}
+	/* Remove the bottom border on the jumbotron for visual effect */
+	.jumbotron {
+		border-bottom: 0;
+	}
+	.bottom-footer #hash {
+		text-align: right;
+	}
+}
+@media screen and (min-width: 992px) {
+	.navbar-default .navbar-nav > li > a {
+		padding: 0 2em;
+	}
+}

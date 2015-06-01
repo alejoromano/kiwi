@@ -1,0 +1,110 @@
+<!doctype html>
+<html class="no-js">
+	<head>
+		<base href="/">
+		<meta charset="utf-8">
+		<title>Kiwi - Bolsas para andar</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<!-- build:css(.) styles/vendor.css -->
+		<!-- bower:css -->
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+		<link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
+		<!-- endbower -->
+		<!-- endbuild -->
+		<link href="lib/typopro/TypoPRO.css" rel="stylesheet" type="text/css"/>
+		<!-- build:css(.tmp) styles/main.css -->
+		<link rel="stylesheet" href="styles/main.css">
+		<!-- endbuild -->
+	</head>
+	<body ng-app="kiwiApp">
+		<!--[if lt IE 7]>
+			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+
+		<!-- Add your site or application content here -->
+		<div class="header">
+			<div class="navbar navbar-default" role="navigation">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<!--button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse"-->
+						<button type="button" class="navbar-toggle collapsed" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" ui-sref="top">
+							<img src="images/kiwi-logo.png" height="90" width="90" alt="Kiwi">
+						</a>
+					</div>
+					<!--div class="collapse navbar-collapse" id="js-navbar-collapse"-->
+					<div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'">
+						<ul class="nav navbar-nav navbar-right">
+							<li ui-sref-active="active"><a ui-sref="campaign">Campaña</a></li>
+							<li ui-sref-active="active"><a ui-sref="products">Productos</a></li>
+							<li ui-sref-active="active"><a ui-sref="history">Historia</a></li>
+							<li ui-sref-active="active"><a ui-sref="contact.retail">Contacto</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div ui-view="top"></div>
+
+		<div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-5 col-md-6">
+						<h6>Seguinos en las redes sociales</h6>
+						<div class="row">
+							<div class="col-sm-12 col-md-6">
+								<h4><i class="fa fa-facebook-official"></i> <a href="https://www.facebook.com/kiwibolsasarg" target="_blank">/kiwibolsasarg</a></h4>
+								<h4><i class="fa fa-twitter-square"></i> <a href="https://twitter.com/kiwibolsas" target="_blank">@KiwiBolsas</a></h4>
+							</div>
+							<div class="col-sm-12 col-md-6">
+								<h4><i class="fa fa-instagram"></i> <a href="https://www.instagram.com/kiwi.bolsas" target="_blank">/kiwi.bolsas</a></h4>
+								<h4><i class="fa fa-pinterest-square"></i> <a href="https://www.pinterest.com/kbolsas/" target="_blank">/kbolsas</a></h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<h6>Contactate con nosotros</h6>
+						<div class="row">
+							<div class="col-sm-12">
+								<h4><i class="fa fa-envelope"></i> <a href="mailto:hola@kiwibolsas.com.ar" target="_blank">hola@kiwibolsas.com.ar</a></h4>		
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bottom-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8">
+						<h6>©2015 kiwibolsas.com.ar. Todos los derechos reservados.</h6>
+					</div>
+					<div class="col-sm-4" id="hash">
+						<h4>#LLEVASTODO</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+		 <script>
+			 !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+			 (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+			 r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+			 }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			 ga('create', 'UA-XXXXX-X');
+			 ga('send', 'pageview');
+		</script>
+
+		<script src="bower_components/requirejs/require.js" data-main="scripts/main.js"></script>
+	</body>
+</html>

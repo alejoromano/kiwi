@@ -1,0 +1,57 @@
+<div id="home">
+	<section id="hero">
+		<div class="container">
+			<div class="jumbotron">
+				<h1>Hero Section</h1>	
+			</div>
+		</div>
+	</section>
+	<section id="collection">
+		<div class="container">
+			<h1>Colección 2015</h1>
+			<h3>Bolsos, Mochilas, Morrales...</h3>
+			<a ui-sref="products" class="btn btn-white">Mirá nuestros productos</a>
+		</div>
+	</section>
+	<section id="mission">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-offset-5 col-sm-7">
+					<h6 class="text-left">Misión</h6>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-offset-1 col-sm-4" id="image-wrapper">
+					<img src="../images/home-mission-img.jpg" class="img-responsive" height="581" width="390" alt="">
+					<div class="square"></div>
+				</div>
+				<div class="col-sm-7">
+					<div id="outline">
+						<h1><u>Llevá todo<br> lo que necesitás<br> para que tu día<br> sea un gran día.</u></h1>
+						<img src="../images/home-mission-pet.gif" height="113" width="113" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="social">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-offset-2 col-sm-8">
+					<div class="row">
+						<div class="col-sm-6">
+								<ul>
+									<li ng-repeat="p in pics">
+											<a href="{{p.link}}" target="_blank"><img ng-src="{{p.images.low_resolution.url}}" /></a>
+									</li>
+								</ul>
+						</div>
+						<div class="col-sm-6">
+							Social Section
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
