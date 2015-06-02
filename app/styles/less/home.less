@@ -1,7 +1,26 @@
 #home {
 	text-align: center;
 	color: @dark-blue;
-	#hero {}
+	#hero {
+		.container {
+			position: relative;
+			figure.logo {
+				position: absolute;
+				background: @dark-blue;
+				color: @white;
+				font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+				font-size: 6em;
+				line-height: 0.786em;
+				font-weight: 700;
+				padding: 0.143em;
+				right: 0;
+				top: 1em;
+			}
+			.jumbotron {
+				background: transparent;
+			}
+		}
+	}
 	#collection{
 		padding: 7em 0 4.5em;
 		color: @white;
@@ -16,7 +35,6 @@
 		padding: 4.5em 0 7em;
 		background: @white;
 		#image-wrapper {
-			position: relative;
 			img {
 				margin-top: 2em;
 			}
@@ -47,6 +65,48 @@
 		}
 	}
 	#social {
+		#instagram-feed {
+			padding-right: 0;
+			padding-left: 0;
+			.instagram-pic {
+				padding-right: 0;
+				padding-left: 0;
+				a {
+					display: block;
+				}
+			}
+			.square {
+				border: 0.286em solid @sky-blue;
+				position: absolute;
+				width: 90%;
+				height: 92%;
+				top: 4%;
+				left: 5%;
+				z-index: 999;
+				pointer-events: none;
+			}
+		}
+		#social-content	{
+			padding-top: 4em;
+			background: @bk-color url(../../images/home-social-bk.gif) bottom center no-repeat;
+			h2 {
+				font-style: normal;
+				font-weight: 100;
+				color: @white;
+				strong {
+					font-weight: 300;
+				}
+			}
+			.bottom {
+				margin: 10.643em 0 0 0;
+				padding: 0 0 5em;
+				i {
+					display: block;
+					font-size: 3em;
+					margin-bottom: 1em;
+				}
+			}
+		}
 		padding: 7em 0 8em;
 		background: @pink;
 	}
