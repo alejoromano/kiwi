@@ -8,8 +8,7 @@ Run `grunt` for building and `grunt serve` for preview.
 ## Testing
 Running `grunt test` will run the unit tests.
 
-
 ## Remaining tasks:
-*Finish Products, Campain, and History views
-*Wire contact form mailer.
-*Finish tests
+* Finish Products, Campain, and History views
+* Wire contact form mailer.
+* Finish tests

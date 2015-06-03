@@ -10,9 +10,10 @@ define(['angular'], function (angular) {
 	 */
 	angular.module('kiwiApp.services.InstagramAPI', [])
 	.service('InstagramAPI', function ($http) {
-	// AngularJS will instantiate a singleton by calling "new" on this function
+		// AngularJS will instantiate a singleton by calling "new" on this function
+		// https://github.com/JoeKarlsson1/Angular-Instafeed/blob/master/js/application.js
 		var clientId = '26e5b0c85d054527826c25e2efb2ef53';
-		var userId = '646979085';
+		var userId = '1348260779';
 		return {
 			fetchPhotos: function(callback){
 				var endpoint = 'https://api.instagram.com/v1/users/' + userId + '/media/recent/?';
