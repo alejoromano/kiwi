@@ -10,14 +10,100 @@
 				color: @white;
 				font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
 				font-size: 6em;
-				line-height: 0.786em;
+				line-height: .786em;
 				font-weight: 700;
-				padding: 0.143em;
+				letter-spacing: .072em;
+				padding: .143em .072em .143em .143em;
 				right: 0;
 				top: 1em;
+				z-index: 999;
 			}
 			.jumbotron {
 				background: transparent;
+				padding: 0;
+				margin: 3em 3em 8.546em;
+				.carousel {
+					border: .358em solid @white;
+					.carousel-control {
+						background-image: none;
+						text-shadow: none;
+						&.left {
+							left: -12%;
+						}
+						&.right {
+							right: -12%;
+						}
+						.glyphicon {
+							font-family: 'TypoPRO Lato';
+							font-weight: 100;
+							font-size: 6.858em;
+							width: 50px;
+							height: 50px;
+							margin-top: -25px;
+							&:before {
+								position: absolute;
+								top: -60px;
+								left: 0;
+								right: 0;
+							}
+						}
+						.glyphicon-chevron-left:before {
+							content: "«";
+						}
+						.glyphicon-chevron-right:before {
+							content: "»";
+						}
+					}
+					.carousel-indicators {
+						bottom: -5em;
+						left: auto;
+						right: 1em;
+						width: auto;
+						li {
+							width: 20px;
+							height: 20px;
+						}
+						.active {
+							width: 21px;
+							height: 21px
+						}
+					}
+
+				}
+				.slide-wrapper {
+					height: 40em;
+					padding: 5em 2em;
+					cursor: pointer;
+					.slide-image {
+						height: 100%;
+						width: 50%;
+						float: left;
+						position: relative;
+						img {
+							position: absolute;
+							bottom: -40px;
+							right: 0;
+						}
+					}
+					.slide-caption {
+						height: 100%;
+						width: 50%;
+						float: left;
+						text-align: left;
+						position: relative;
+						h1 {
+							font-size: 5.143em;
+							line-height: 1.286em;
+							font-weight: 100;
+							letter-spacing: .358em;
+							color: @white;
+							margin: 0;
+							position: absolute;
+							bottom: 0;
+							left: 5%;
+						}
+					}
+				}
 			}
 		}
 	}

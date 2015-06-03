@@ -7,9 +7,13 @@
 			<div class="jumbotron">
 				<carousel interval="myInterval">
 					<slide ng-repeat="slide in slides" active="slide.active">
-						<img ng-src="{{slide.image}}" style="margin:auto;">
-						<div class="carousel-caption">
-							<h1>{{slide.text}}</h1>
+						<div class="slide-wrapper" ui-sref="{{slide.state}}">
+							<div class="slide-image">
+								<img class=" img-responsive" ng-src="{{slide.image}}">		
+							</div>
+							<div class="slide-caption">
+								<h1>#<br>{{slide.text}}</h1>
+							</div>	
 						</div>
 					</slide>
 				</carousel>

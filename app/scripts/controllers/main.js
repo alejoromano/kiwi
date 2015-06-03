@@ -19,20 +19,20 @@ define(['angular'], function (angular) {
 			$scope.myInterval = 5000;
 			$scope.slides = [
 				{
-					image: 'http://placekitten.com/600/300',
-					text: '# BolsaS para andar',
-					url: ''
+					image: '../../images/slide-01-mochila.jpg',
+					text: 'Bolsas para andar',
+					state: 'products'
 				},
 				{
-					image: 'http://placekitten.com/600/300',
-					text: 'slide 2',
-					url: ''
+					image: '../../images/slide-02-neceser.jpg',
+					text: 'Llevá todo',
+					state: 'products'
 				},
 				{
-					image: 'http://placekitten.com/600/300',
-					text: 'slide 3',
-					url: ''
-				},
+					image: '../../images/slide-03-morral.jpg',
+					text: 'Llevás todo',
+					state: 'products'
+				}
 			];
 
 			$scope.data = {};
