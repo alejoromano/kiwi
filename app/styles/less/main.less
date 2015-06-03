@@ -3,6 +3,32 @@
 @sky-blue: #effdff;
 @bk-color: #ff684f;
 @pink: #fffaf3;
+
+@screen-xs:480px;
+@screen-xs-min:	@screen-xs;
+
+@screen-sm:768px;
+@screen-sm-min:	@screen-sm;
+
+@screen-md:992px;
+@screen-md-min:	@screen-md;
+
+@screen-lg:1200px;
+@screen-lg-min:	@screen-lg;
+
+@screen-xs-max: (@screen-sm-min - 1);
+@screen-sm-max: (@screen-md-min - 1);
+@screen-md-max: (@screen-lg-min - 1);
+
+/*
+//Small devices (tablets, 768px and up):
+@media (min-width: @screen-sm) { ... }
+//Medium devices (desktops, 992px and up):
+@media (min-width: @screen-md) { ... }
+//Large devices (large desktops, 1200px and up):
+@media (min-width: @screen-lg) { ... }
+*/
+
 @import "mixins/buttons.less";
 @import "type.less";
 @import "home.less";
