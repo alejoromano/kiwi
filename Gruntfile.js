@@ -48,7 +48,7 @@ module.exports = function (grunt) {
 
 		typopro: {
 				options: {
-						directory: '<%= yeoman.app %>/lib/typopro',
+						directory: '<%= yeoman.app %>/fonts',
 						mergecss: true,
 						fonts: ['Lato']
 				}
@@ -218,15 +218,13 @@ module.exports = function (grunt) {
 			}
 		},
 
-
-
 		// Renames files for browser caching purposes
 		filerev: {
 			dist: {
 				src: [
 					'<%= yeoman.dist %>/styles/{,*/}*.css',
-					'<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-					'<%= yeoman.dist %>/styles/fonts/*'
+					//'<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+					'<%= yeoman.dist %>/fonts/*.css'
 				]
 			}
 		},
@@ -354,7 +352,8 @@ module.exports = function (grunt) {
 						'*.html',
 						'views/{,*/}*.html',
 						'images/{,*/}*.{webp}',
-						'styles/fonts/{,*/}*.*'
+						//'styles/fonts/{,*/}*.*',
+						'fonts/{,*/}*.*'
 					]
 				}, {
 					expand: true,
@@ -376,7 +375,14 @@ module.exports = function (grunt) {
 					cwd: 'bower_components/bootstrap/dist',
 					src: 'fonts/*',
 					dest: '<%= yeoman.dist %>'
-				}]
+				}, {
+					//for font-awesome
+                    expand: true,
+                    dot: true,
+                    cwd: 'bower_components/components-font-awesome',
+                    src: ['fonts/*.*'],
+                    dest: '<%= yeoman.dist %>'
+                }]
 			},
 			styles: {
 				expand: true,
@@ -410,8 +416,8 @@ module.exports = function (grunt) {
 		},
 
 		// Settings for grunt-bower-requirejs
-		bower: {
-			app: {
+		bowerRequirejs: {
+			target: {
 				rjsConfig: '<%= yeoman.app %>/scripts/main.js',
 				options: {
 					exclude: ['requirejs', 'json3', 'es5-shim', 'bootstrap']
@@ -454,8 +460,8 @@ module.exports = function (grunt) {
 
 	});
 	
+	grunt.loadNpmTasks('grunt-bower-requirejs');
 	grunt.loadNpmTasks('grunt-contrib-connect');
-
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-typopro');
@@ -482,7 +488,7 @@ module.exports = function (grunt) {
 
 	grunt.registerTask('test', [
 		'clean:server',
-		'bower:app',
+		'bowerRequirejs',
 		'replace:test',
 		'wiredep',
 		'concurrent:test',
@@ -495,7 +501,7 @@ module.exports = function (grunt) {
 		'less',
 		'clean:dist',
 		'wiredep',
-		'bower:app',
+		'bowerRequirejs',
 		'replace:test',
 		'useminPrepare',
 		'concurrent:dist',

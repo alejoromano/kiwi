@@ -7,18 +7,18 @@ require.config({
 		'angular-mocks': '../../bower_components/angular-mocks/angular-mocks',
 		'angular-resource': '../../bower_components/angular-resource/angular-resource',
 		'angular-route': '../../bower_components/angular-route/angular-route',
-		uiRouter: '../../bower_components/angular-ui-router/release/angular-ui-router',
+		'angular-ui-router': '../../bower_components/angular-ui-router/release/angular-ui-router',
 		'angular-sanitize': '../../bower_components/angular-sanitize/angular-sanitize',
 		'angular-touch': '../../bower_components/angular-touch/angular-touch',
+		'angular-bootstrap': '../../bower_components/angular-bootstrap/ui-bootstrap-tpls',
 		bootstrap: '../../bower_components/bootstrap/dist/js/bootstrap',
-		uiBootstrap: '../../bower_components/angular-bootstrap/ui-bootstrap-tpls',
-		retina: '../../bower_components/retina.js/build/js/retina-1.2.0'
+		retinajs: '../../bower_components/retinajs/dist/retina'
 	},
 	shim: {
 		angular: {
 			exports: 'angular'
 		},
-		uiRouter: {
+		'angular-ui-router': {
 			deps: [
 				'angular'
 			]
@@ -47,7 +47,7 @@ require.config({
 			],
 			exports: 'angular.mock'
 		},
-		uiBootstrap: {
+		'angular-bootstrap': {
 			deps: [
 				'angular'
 			]
@@ -73,9 +73,9 @@ require([
 	'angular-resource',
 	'angular-animate',
 	'angular-touch',
-	'uiRouter',
-	'uiBootstrap'
-], function(angular, app, ngRoutes, uiRouter, ngCookies, ngSanitize, ngResource, ngAnimate, ngTouch, uiBootstrap) {
+	'angular-ui-router',
+	'angular-bootstrap'
+], function(angular, app, ngRoutes, ngCookies, ngSanitize, ngResource, ngAnimate, ngTouch) {
 	'use strict';
 	/* jshint ignore:start */
 	var $html = angular.element(document.getElementsByTagName('html')[0]);

@@ -1,5 +1,5 @@
 /*jshint unused: vars */
-define(['angular', 'uiRouter', 'controllers/main', 'controllers/campaign', 'controllers/products', 'controllers/history', 'controllers/contact', 'services/instagramapi']/*deps*/, function (angular, MainCtrl, CampaignCtrl, ProductsCtrl, HistoryCtrl, ContactCtrl, InstagramAPIService)/*invoke*/ {
+define(['angular', 'controllers/main', 'controllers/campaign', 'controllers/products', 'controllers/history', 'controllers/contact', 'services/instagramapi']/*deps*/, function (angular, MainCtrl, CampaignCtrl, ProductsCtrl, HistoryCtrl, ContactCtrl, InstagramAPIService)/*invoke*/ {
 	'use strict';
 
 	/**
