@@ -23,7 +23,8 @@ requirejs.config({
 		'angular-sanitize': '../../bower_components/angular-sanitize/angular-sanitize',
 		'angular-touch': '../../bower_components/angular-touch/angular-touch',
 		'angular-bootstrap': '../../bower_components/angular-bootstrap/ui-bootstrap-tpls',
-		retinajs: '../../bower_components/retinajs/dist/retina'
+		retinajs: '../../bower_components/retinajs/dist/retina',
+		'lato-font': '../../bower_components/lato-font/gulpfile'
 	},
 
     shim: {

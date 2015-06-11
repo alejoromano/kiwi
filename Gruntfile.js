@@ -366,21 +366,21 @@ module.exports = function (grunt) {
 					expand: true,
 					cwd: 'bower_components/bootstrap/dist',
 					src: 'fonts/*',
-					dest: '<%= yeoman.dist %>/styles'
+					dest: '<%= yeoman.dist %>'
 				}, {
 					//for font-awesome
 					expand: true,
 					dot: true,
 					cwd: 'bower_components/components-font-awesome',
 					src: ['fonts/*.*'],
-					dest: '<%= yeoman.dist %>/styles'
+					dest: '<%= yeoman.dist %>'
 				}, {
 					//for Lato
 					expand: true,
 					dot: true,
-					cwd: 'bower_components/lato-webfont',
-					src: ['fonts/*.*'],
-					dest: '<%= yeoman.dist %>/styles'
+					cwd: 'bower_components/lato-font',
+					src: ['fonts/{,*/}*.*'],
+					dest: '<%= yeoman.dist %>'
 				}]
 			},
 			styles: {
@@ -419,7 +419,7 @@ module.exports = function (grunt) {
 			target: {
 				rjsConfig: '<%= yeoman.app %>/scripts/main.js',
 				options: {
-					exclude: ['requirejs','json3','es5-shim','bootstrap','lato-webfont']
+					exclude: ['requirejs','json3','es5-shim','bootstrap','lato-font']
 				}
 			}
 		},
