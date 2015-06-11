@@ -23,7 +23,6 @@ requirejs.config({
 		'angular-sanitize': '../../bower_components/angular-sanitize/angular-sanitize',
 		'angular-touch': '../../bower_components/angular-touch/angular-touch',
 		'angular-bootstrap': '../../bower_components/angular-bootstrap/ui-bootstrap-tpls',
-		bootstrap: '../../bower_components/bootstrap/dist/js/bootstrap',
 		retinajs: '../../bower_components/retinajs/dist/retina'
 	},
 

@@ -10,7 +10,7 @@
 var modRewrite = require('connect-modrewrite');
 /*
 var mountFolder = function (connect, dir) {
-    return connect.static(require('path').resolve(dir));
+	return connect.static(require('path').resolve(dir));
 };
 */
 module.exports = function (grunt) {
@@ -44,14 +44,6 @@ module.exports = function (grunt) {
 					'<%= yeoman.app %>/styles/main.css': '<%= yeoman.app %>/styles/less/main.less' // destination file and source file
 				}
 			}
-		},
-
-		typopro: {
-				options: {
-						directory: '<%= yeoman.app %>/fonts',
-						mergecss: true,
-						fonts: ['Lato']
-				}
 		},
 
 		// Watches files for changes and runs tasks based on the changed files
@@ -224,7 +216,6 @@ module.exports = function (grunt) {
 				src: [
 					'<%= yeoman.dist %>/styles/{,*/}*.css',
 					//'<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-					'<%= yeoman.dist %>/fonts/*.css'
 				]
 			}
 		},
@@ -247,7 +238,8 @@ module.exports = function (grunt) {
 				assetsDirs: [
 					'<%= yeoman.dist %>',
 					'<%= yeoman.dist %>/images',
-					'<%= yeoman.dist %>/styles'
+					'<%= yeoman.dist %>/styles',
+					'<%= yeoman.dist %>/styles/fonts'
 				]
 			}
 		},
@@ -374,15 +366,22 @@ module.exports = function (grunt) {
 					expand: true,
 					cwd: 'bower_components/bootstrap/dist',
 					src: 'fonts/*',
-					dest: '<%= yeoman.dist %>'
+					dest: '<%= yeoman.dist %>/styles'
 				}, {
 					//for font-awesome
-                    expand: true,
-                    dot: true,
-                    cwd: 'bower_components/components-font-awesome',
-                    src: ['fonts/*.*'],
-                    dest: '<%= yeoman.dist %>'
-                }]
+					expand: true,
+					dot: true,
+					cwd: 'bower_components/components-font-awesome',
+					src: ['fonts/*.*'],
+					dest: '<%= yeoman.dist %>/styles'
+				}, {
+					//for Lato
+					expand: true,
+					dot: true,
+					cwd: 'bower_components/lato-webfont',
+					src: ['fonts/*.*'],
+					dest: '<%= yeoman.dist %>/styles'
+				}]
 			},
 			styles: {
 				expand: true,
@@ -420,7 +419,7 @@ module.exports = function (grunt) {
 			target: {
 				rjsConfig: '<%= yeoman.app %>/scripts/main.js',
 				options: {
-					exclude: ['requirejs', 'json3', 'es5-shim', 'bootstrap']
+					exclude: ['requirejs','json3','es5-shim','bootstrap','lato-webfont']
 				}
 			}
 		},
@@ -464,7 +463,6 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-typopro');
 
 	grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
 		if (target === 'dist') {
