@@ -1,13 +1,51 @@
 <div id="products" class="container">
-	<h2>This is the Products View</h2>
-	<p>Finish this after finishing</p>
-	<ul>
-		<li>Contact</li>
-		<li>Home</li>
-	</ul>
-	<p>You are still missing</p>
-	<ul>
-		<li>Campaign</li>
-		<li>History</li>
-	</ul>
+	<section id="hero">
+		<div class="inner-content">
+			<div class="square"></div>
+			<h1>Colección 2015</h1>
+			<h3>Bolsos, Mochilas, Morrales...</h3>
+			<a ui-sref="products" class="btn btn-white">Mirá nuestros productos</a>
+		</div>
+	</section>
+	<div class="page-header">
+		<h1>Invierno 2015</h1>
+	</div>
+	<section id="products-wrapper">
+		<div class="row">
+			<div class="col-sm-4 col-md-3" ng-repeat-start="product in products">
+				<div class="thumbnail" ng-if="!product.special">
+					<div class="triangle-container">
+						<div ng-repeat="triangle in product.bk" class="triangle {{triangle.pos}} {{triangle.clr}}"></div>
+						<div class="clearfix"></div>
+					</div>
+					<img ng-src="/images/products/{{product.img}}" class="img-responsive" alt="{{product.name}}">
+					<div class="caption">
+						<h5 class="product-id">ART. N° {{product.id}}</h5>
+						<h5 class="product-name">{{product.name}}</h5>
+						<h5 class="product-color">{{product.color}}</h5>
+					</div>
+				</div>
+				<div class="thumbnail special" ng-if="product.special">
+					<img ng-src="/images/products/{{product.img}}" class="img-responsive" alt="{{product.name}}">
+					<div class="caption">
+						<div class="caption-content">
+							<h5 class="product-id">ART. N° {{product.id}}</h5>
+							<h5 class="product-name">{{product.name}}</h5>
+							<h5 class="product-color">{{product.color}}</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-8 col-md-6" ng-if="( $index + 1 ) % 8 == 0" ng-repeat-end>
+				<div class="insert">
+					<div class="insert-content">
+						<div class="square">
+							<h2>#<br>Llevá<br>todo</h2>	
+						</div>
+						<img ng-src="/images/product-insert-deer.png" alt="Un ciervito">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </div>

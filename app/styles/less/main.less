@@ -3,6 +3,7 @@
 @sky-blue: #effdff;
 @bk-color: #ff684f;
 @pink: #fffaf3;
+@yellow: #ffe900;
 
 @screen-xs:480px;
 @screen-xs-min:	@screen-xs;
@@ -31,8 +32,10 @@
 
 @import "mixins/buttons.less";
 @import "type.less";
+@import "components.less";
 @import "home.less";
 @import "contact.less";
+@import "products.less";
 
 .browsehappy {
 	margin: 0.2em 0;
@@ -114,6 +117,9 @@ body {
 	#hash {
 		text-align: left;
 	}
+}
+.bottom-footer a {
+	color: @dark-blue;
 }
 
 /* Responsive: Portrait tablets and up */

@@ -73,8 +73,9 @@ require([
 	'angular-animate',
 	'angular-touch',
 	'angular-ui-router',
-	'angular-bootstrap'
-], function(angular, app, ngRoutes, ngCookies, ngSanitize, ngResource, ngAnimate, ngTouch) {
+	'angular-bootstrap',
+	'retinajs'
+	], function(angular, app, ngRoutes, ngCookies, ngSanitize, ngResource, ngAnimate, ngTouch) {
 	'use strict';
 	/* jshint ignore:start */
 	var $html = angular.element(document.getElementsByTagName('html')[0]);

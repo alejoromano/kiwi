@@ -10,11 +10,6 @@ define(['angular'], function (angular) {
 	 */
 	angular.module('kiwiApp.controllers.MainCtrl', [])
 		.controller('MainCtrl', function ($scope, InstagramAPI) {
-			$scope.awesomeThings = [
-				'HTML5 Boilerplate',
-				'AngularJS',
-				'Karma'
-			];
 
 			$scope.myInterval = 5000;
 			$scope.slides = [

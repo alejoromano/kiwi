@@ -1,0 +1,239 @@
+#products #hero {
+	text-align: center;
+	background: url(../../images/products-hero.jpg) center center no-repeat;
+	background-size: auto 100%;
+	position: relative;
+	min-height: 48em;
+	margin-bottom: 4em;
+
+	.inner-content {
+		padding: 8em 0;
+	}
+	.square {
+		border: 0.286em solid @white;
+		position: absolute;
+		top: 3em;
+		right: 3em;
+		bottom: 3em;
+		left: 3em;
+	}
+	a.btn {
+		margin-top: 18em;
+	}
+}
+#products #products-wrapper {
+	.row {
+		margin: 0;
+
+		& > div {
+			padding: 0;
+		}
+	}
+}
+#products .thumbnail {
+	position: relative;
+	padding: 0;
+	border: none;
+	border-radius: 0;
+	background: @white;
+	width: 100%;
+	margin: 0;
+	
+	@media (min-width: @screen-sm) {
+		&:after {
+			content: "";
+			display: block;
+			padding-top: 100%;
+		}
+	}
+
+	.triangle-container {
+		position: relative;
+		.triangle {
+			float: left;
+			overflow: hidden;
+			width: 0;
+			height: 0;
+		}
+		.triangle:after {
+			content: "";
+			display: block;
+			width: 0;
+			height: 0;
+		}
+		/* Top Triangle */
+		.top {
+			width: 100%;
+			padding-left: 50%;
+			padding-top: 50%;
+			&:after {
+				margin-left:-500px;
+				margin-top:-500px;
+				border-left: 500px solid transparent;
+				border-right: 500px solid transparent;
+				border-top-width: 500px;
+				border-top-style: solid;
+			}
+			&.pink:after { border-top-color: @pink;}
+			&.red:after { border-top-color: @bk-color;}
+			&.blue:after { border-top-color: @sky-blue;}
+			&.yellow:after { border-top-color: @yellow;}
+		}
+		/* Right Triangle */
+		.right {
+			position: absolute;
+			top:0;
+			right: 0;
+			width: 50%;
+			padding-top: 50%;
+			padding-bottom: 50%;
+			&:after {
+				margin-top:-500px;
+				border-top: 500px solid transparent;
+				border-bottom: 500px solid transparent;
+				border-right-width: 500px;
+				border-right-style: solid;
+			}
+			&.pink:after { border-right-color: @pink;}
+			&.red:after { border-right-color: @bk-color;}
+			&.blue:after { border-right-color: @sky-blue;}
+			&.yellow:after { border-right-color: @yellow;}
+		}
+		/* Bottom Triangle */
+		.bottom {
+			width: 100%;
+			padding-left:50%;
+			padding-bottom: 50%;
+			overflow: hidden;
+			&:after {
+				margin-left:-500px;
+				border-left: 500px solid transparent;
+				border-right: 500px solid transparent;
+				border-bottom-width: 500px;
+				border-bottom-style: solid;
+			}
+			&.pink:after { border-bottom-color: @pink;}
+			&.red:after { border-bottom-color: @bk-color;}
+			&.blue:after { border-bottom-color: @sky-blue;}
+			&.yellow:after { border-bottom-color: @yellow;}
+		}
+		/* Left Triangle */
+		.left {
+			position: absolute;
+			top:0;
+			left: 0;
+			width: 50%;
+			padding-top: 50%;
+			padding-bottom: 50%;
+			&:after {
+				margin-top: -500px;
+				position: absolute;
+				right: 0;
+				border-top: 500px solid transparent;
+				border-bottom: 500px solid transparent;
+				border-left-width: 500px;
+				border-left-style: solid;
+			}
+			&.pink:after { border-left-color: @pink;}
+			&.red:after { border-left-color: @bk-color;}
+			&.blue:after { border-left-color: @sky-blue;}
+			&.yellow:after { border-left-color: @yellow;}
+		}
+	}
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.caption {
+
+		@media (min-width: @screen-sm) {
+			position: absolute;
+			top: 50%;
+			width: 100%;
+		}
+
+		h5 {
+			color: @dark-blue;
+			text-transform: uppercase;
+
+			@media (max-width: @screen-sm) {
+				font-size: 2.572em;
+			}
+		}
+		.product-name,
+		.product-color {
+			font-weight: 900;
+			font-style: normal;
+			text-transform: uppercase;
+		}
+	}
+
+	&.special:after {
+		padding: 0;
+	}
+	&.special img {
+		position: relative;
+		top: auto;
+	}
+	&.special .caption {
+		top: 1.072em;
+		right: 1.072em;
+		left: 1.072em;
+		height: 45%;
+		width: auto;
+		background: fade(@pink, 80%);
+		position: absolute;
+
+		.caption-content {
+			position: absolute;
+			bottom: 0;
+		}
+	}
+
+}
+#products .insert {
+	position: relative;
+	width: 100%;
+	background: @sky-blue;
+	
+	&:after {
+		content: "";
+		display: block;
+		padding-top: 100%;
+	}
+
+	.insert-content {
+		padding: 1.072em !important;
+		position: absolute;
+		top:0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+
+		.square {
+			border: .429em solid @dark-blue;
+			padding: 0 1.072em 0 0;
+
+			@media (min-width: @screen-lg) {
+				padding: 0 3.215em 0 0;
+			}
+			
+		}
+		h2 {
+			font-size: 3.715em;
+			line-height: 1.286em;
+			letter-spacing: .358em;
+			font-weight: 100;
+			color: @dark-blue;
+			font-style: normal;
+			text-transform: uppercase;
+			text-align: right;
+			margin-top: 0;
+
+			@media (min-width: @screen-lg) {
+				font-size: 5.143em;
+			}
+		}
+	}
+}
