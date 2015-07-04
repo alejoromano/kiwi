@@ -27,7 +27,8 @@ define(['angular', 'controllers/main', 'controllers/campaign', 'controllers/prod
 			'ngAnimate',
 			'ngTouch',
 			'ui.router',
-			'ui.bootstrap'
+			'ui.bootstrap',
+			'ngRetina'
 		])
 		.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 			// For any unmatched url, redirect to /state1
@@ -64,7 +65,8 @@ define(['angular', 'controllers/main', 'controllers/campaign', 'controllers/prod
 					url:'/historia',
 					views: {
 						'top@': {
-							templateUrl: 'views/history.html'
+							templateUrl: 'views/history.html',
+							controller: 'HistoryCtrl'
 						}
 					}
 				})

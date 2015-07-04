@@ -15,7 +15,7 @@ define(['angular'], function (angular) {
 			{	'id':'INV15-081',
 				'special': false,
 				'name':'Neceser',
-				'img':'INV15-081.PNG',
+				'img':'INV15-081.png',
 				'color':'Magenta/Azul',
 				'bk': [
 					{'pos':'top','clr':'white'},
@@ -27,7 +27,7 @@ define(['angular'], function (angular) {
 			{	'id':'INV15-071',
 				'special': true,
 				'name':'Bolso',
-				'img':'INV15-071.JPG',
+				'img':'INV15-071.jpg',
 				'color':'Natural/Azul/Rojo',
 				'bk': [
 					{'pos':'top','clr':'pink'},
@@ -39,7 +39,7 @@ define(['angular'], function (angular) {
 			{	'id':'INV15-027',
 				'special': false,
 				'name':'Morral',
-				'img':'INV15-027.PNG',
+				'img':'INV15-027.png',
 				'color':'Camel/Negro',
 				'bk': [
 					{'pos':'top','clr':'red'},
@@ -51,7 +51,7 @@ define(['angular'], function (angular) {
 			{	'id':'INV15-005',
 				'special': false,
 				'name':'Mochila',
-				'img':'INV15-005.PNG',
+				'img':'INV15-005.png',
 				'color':'Azul/Blanco',
 				'bk': [
 					{'pos':'top','clr':'pink'},
@@ -63,7 +63,7 @@ define(['angular'], function (angular) {
 			{	'id':'INV15-019',
 				'special': false,
 				'name':'Bolso',
-				'img':'INV15-019.PNG',
+				'img':'INV15-019.png',
 				'color':'Borravino/Magenta',
 				'bk': [
 					{'pos':'top','clr':'blue'},
@@ -75,7 +75,7 @@ define(['angular'], function (angular) {
 			{	'id':'INV15-003',
 				'special': false,
 				'name':'Mochila',
-				'img':'INV15-003.PNG',
+				'img':'INV15-003.png',
 				'color':'Negro/Blanco',
 				'bk': [
 					{'pos':'top','clr':'yellow'},
@@ -87,7 +87,7 @@ define(['angular'], function (angular) {
 			{	'id':'INV15-020',
 				'special': false,
 				'name':'Bolso',
-				'img':'INV15-020.PNG',
+				'img':'INV15-020.png',
 				'color':'Negro/Camel',
 				'bk': [
 					{'pos':'top','clr':'pink'},
@@ -99,7 +99,7 @@ define(['angular'], function (angular) {
 			{	'id':'INV15-042',
 				'special': true,
 				'name':'Bolso',
-				'img':'INV15-042.JPG',
+				'img':'INV15-042.jpg',
 				'color':'Azul/Magenta',
 				'bk': [
 					{'pos':'top','clr':'blue'},
@@ -111,7 +111,7 @@ define(['angular'], function (angular) {
 			{	'id':'INV15-078',
 				'special': false,
 				'name':'Neceser',
-				'img':'INV15-078.PNG',
+				'img':'INV15-078.png',
 				'color':'Yema/Negro',
 				'bk': [
 					{'pos':'top','clr':'red'},
@@ -123,7 +123,7 @@ define(['angular'], function (angular) {
 			{	'id':'INV15-025',
 				'special': false,
 				'name':'Morral',
-				'img':'INV15-025.PNG',
+				'img':'INV15-025.png',
 				'color':'Negro/Blanco',
 				'bk': [
 					{'pos':'top','clr':'pink'},
@@ -135,7 +135,7 @@ define(['angular'], function (angular) {
 			{	'id':'INV15-033',
 				'special': false,
 				'name':'Bolso',
-				'img':'INV15-033.PNG',
+				'img':'INV15-033.png',
 				'color':'Negro/Blanco',
 				'bk': [
 					{'pos':'top','clr':'pink'},
@@ -147,7 +147,7 @@ define(['angular'], function (angular) {
 			{	'id':'INV15-037',
 				'special': false,
 				'name':'Bolso',
-				'img':'INV15-037.PNG',
+				'img':'INV15-037.png',
 				'color':'Borravino/Negro',
 				'bk': [
 					{'pos':'top','clr':'white'},
@@ -160,7 +160,7 @@ define(['angular'], function (angular) {
 			{	'id':'INV15-073',
 				'special': false,
 				'name':'Bolso',
-				'img':'INV15-073.PNG',
+				'img':'INV15-073.png',
 				'color':'Mostaza/Negro',
 				'bk': [
 					{'pos':'top','clr':'red'},
@@ -172,7 +172,7 @@ define(['angular'], function (angular) {
 			{	'id':'INV15-076',
 				'special': false,
 				'name':'Bolso',
-				'img':'INV15-076.PNG',
+				'img':'INV15-076.png',
 				'color':'Oliva/Negro',
 				'bk': [
 					{'pos':'top','clr':'pink'},

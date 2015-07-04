@@ -1,10 +1,27 @@
 <div id="history" class="container">
-	<h2>This is the History View</h2>
-	<p>Finish this after finishing</p>
-	<ul>
-		<li>Contact</li>
-		<li>Home</li>
-		<li>Products</li>
-		<li>Campaign</li>
-	</ul>
+	<section id="hero">
+		<div class="inner-content">
+			<figure class="logo">
+				kiwi
+			</figure>
+			<a ui-sref="history" class="btn btn-white">Desde 2013</a>
+		</div>
+	</section>
+	<section id="history-wrapper">
+		<div class="row" ng-repeat="history in histories">
+			<div class="col-sm-12">
+				<div class="history-content">
+					<h6 ng-bind="history.subject"></h6>
+					<h2 ng-bind="history.title"></h2>
+					<h5 ng-bind="history.body"></h5>
+					<img ng-src="/images/" alt="">
+				</div>
+			</div>
+			<div class="col-sm-12">
+				<div class="history-image">
+					<img ng-src="/images/{{history.img}}" alt="" class="img-responsive">
+				</div>
+			</div>
+		</div>
+	</section>
 </div>

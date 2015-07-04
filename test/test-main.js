@@ -23,8 +23,7 @@ requirejs.config({
 		'angular-sanitize': '../../bower_components/angular-sanitize/angular-sanitize',
 		'angular-touch': '../../bower_components/angular-touch/angular-touch',
 		'angular-bootstrap': '../../bower_components/angular-bootstrap/ui-bootstrap-tpls',
-		retinajs: '../../bower_components/retinajs/dist/retina',
-		'angular-deckgrid': '../../bower_components/angular-deckgrid/angular-deckgrid'
+		'angular-retina': '../../bower_components/angular-retina/dist/angular-retina'
 	},
 
     shim: {

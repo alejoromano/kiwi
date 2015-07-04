@@ -11,7 +11,7 @@ require.config({
 		'angular-sanitize': '../../bower_components/angular-sanitize/angular-sanitize',
 		'angular-touch': '../../bower_components/angular-touch/angular-touch',
 		'angular-bootstrap': '../../bower_components/angular-bootstrap/ui-bootstrap-tpls',
-		retinajs: '../../bower_components/retinajs/dist/retina'
+		'angular-retina': '../../bower_components/angular-retina/dist/angular-retina'
 	},
 	shim: {
 		angular: {
@@ -50,6 +50,11 @@ require.config({
 			deps: [
 				'angular'
 			]
+		},
+		'angular-retina': {
+			deps: [
+				'angular'
+			]
 		}
 	},
 	priority: [
@@ -74,8 +79,8 @@ require([
 	'angular-touch',
 	'angular-ui-router',
 	'angular-bootstrap',
-	'retinajs'
-	], function(angular, app, ngRoutes, ngCookies, ngSanitize, ngResource, ngAnimate, ngTouch) {
+	'angular-retina'
+	], function(angular, app, ngRoutes, ngCookies, ngSanitize, ngResource, ngAnimate, ngTouch, ngRetina) {
 	'use strict';
 	/* jshint ignore:start */
 	var $html = angular.element(document.getElementsByTagName('html')[0]);
