@@ -1,25 +1,27 @@
 <div id="history" class="container">
 	<section id="hero">
 		<div class="inner-content">
-			<figure class="logo">
-				kiwi
-			</figure>
-			<a ui-sref="history" class="btn btn-white">Desde 2013</a>
+			<div>
+				<figure class="logo">kiwi</figure>
+			</div>
+			<div>
+				<a ui-sref="history" class="btn btn-white">Desde 2013</a>
+			</div>
 		</div>
 	</section>
 	<section id="history-wrapper">
 		<div class="row" ng-repeat="history in histories">
-			<div class="col-sm-12">
+			<div class="{{history.cols}}">
 				<div class="history-content">
 					<h6 ng-bind="history.subject"></h6>
 					<h2 ng-bind="history.title"></h2>
 					<h5 ng-bind="history.body"></h5>
-					<img ng-src="/images/" alt="">
+					<img ng-src="/images/{{history.icon}}" alt="">	
 				</div>
 			</div>
 			<div class="col-sm-12">
 				<div class="history-image">
-					<img ng-src="/images/{{history.img}}" alt="" class="img-responsive">
+					<img ng-src="/images/{{history.img}}" alt="" class="img-responsive">	
 				</div>
 			</div>
 		</div>
