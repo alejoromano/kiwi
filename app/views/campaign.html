@@ -1,13 +1,40 @@
 <div id="campaign" class="container">
-	<h2>This is the Campaign View</h2>
-	<p>Finish this after finishing</p>
-	<ul>
-		<li>Contact</li>
-		<li>Home</li>
-		<li>Products</li>
-	</ul>
-	<p>You are still missing</p>
-	<ul>
-		<li>History</li>
-	</ul>
+	<section id="hero">
+		<h1>Campaña <span>2015</span></h1>
+	</section>
+	<section id="campaign-wrapper">
+		<div class="row">
+			<div ng-class="photo.double?'col-xs-12 col-sm-8 col-md-6':'col-xs-6 col-sm-4 col-md-3'" ng-repeat="photo in set1">
+				<img ng-src="/images/campaign/{{photo.thumb}}" class="img-responsive center-block">
+			</div>
+		</div>
+		<div class="page-header">
+			<h1>Winter <span></span> Forest</h1>
+			<img ng-src="/images/campaign-icon-01.png" alt="">
+		</div>
+		<div class="row">
+			<div ng-class="photo.double?'col-xs-12 col-sm-8 col-md-6':'col-xs-6 col-sm-4 col-md-3'" ng-repeat="photo in set2">
+				<img ng-src="/images/campaign/{{photo.thumb}}" class="img-responsive center-block">
+			</div>
+		</div>
+		<div class="page-header">
+			<div class="row">
+				<div class="col-sm-3">
+					<img ng-src="/images/campaign-icon-02.png" alt="una ramita">		
+				</div>
+				<div class="col-sm-9 col-md-offset-1 col-md-8">
+					<div class="hashtags">
+						<a class="btn btn-red disabled" href="">#kiwi</a>
+						<a class="btn btn-red disabled" href="">#bolsasparaandar</a>
+						<a class="btn btn-red disabled" href="">#llevastodo</a>	
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div ng-class="photo.double?'col-xs-12 col-sm-8 col-md-6':'col-xs-6 col-sm-4 col-md-3'" ng-repeat="photo in set3">
+				<img ng-src="/images/campaign/{{photo.thumb}}" class="img-responsive center-block">
+			</div>
+		</div>
+	</section>
 </div>

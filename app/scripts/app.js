@@ -48,7 +48,8 @@ define(['angular', 'controllers/main', 'controllers/campaign', 'controllers/prod
 					url:'/campaña',
 					views: {
 						'top@': {
-							templateUrl: 'views/campaign.html'
+							templateUrl: 'views/campaign.html',
+							controller: 'CampaignCtrl'
 						}
 					}
 				})

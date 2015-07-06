@@ -1,0 +1,91 @@
+#campaign {
+	@media (min-width: @screen-sm) {
+		padding: 0;
+	}
+}
+#campaign #hero {
+	text-align: center;
+	background: url(../../images/campaign-hero.jpg) center left no-repeat;
+	position: relative;
+	min-height: 43.215em;
+	margin-bottom: 4em;
+	position: relative;
+
+	h1 {
+		font-size: 5.143em;
+		height: 1.5em;
+		line-height: 1.5em;
+		border: .0458em solid @white;
+		display: inline-block;
+		margin: auto;
+		position: absolute;
+		top: 2em; left: .286em; bottom: 0; right: .286em;
+
+		//Small devices (tablets, 768px and up):
+		@media (min-width: @screen-sm) {
+			left: 1em;
+			right: .5em;
+			letter-spacing: normal;
+			height: 2.358em;
+			line-height: 2.358em;
+		}
+		//Medium devices (desktops, 992px and up):
+		@media (min-width: @screen-md) {
+			letter-spacing: .286em;
+		}
+		//Large devices (large desktops, 1200px and up):
+		@media (min-width: @screen-lg) {
+			letter-spacing: .429em;
+		}
+
+		span {
+			font-weight: 300;
+		}
+	}
+}
+#campaign #campaign-wrapper {
+	background: @sky-blue;
+
+	.row {
+		margin: 0;
+
+		& > div {
+			padding: 0;
+		}
+	}
+
+	.page-header {
+
+		h1 {
+			color: @bk-color;
+
+			@media (min-width: @screen-sm) {
+				line-height: 220px;
+  				margin: 0 0 -220px;
+			}
+
+			span {
+				//Small devices (tablets, 768px and up):
+				@media (min-width: @screen-sm) {
+					width: 165px;
+					display: inline-block;
+				}
+				//Medium devices (desktops, 992px and up):
+				@media (min-width: @screen-md) {
+					width: 50px;
+				}
+				//Large devices (large desktops, 1200px and up):
+				@media (min-width: @screen-lg) {
+					width: 90px;
+				}
+			}
+		}
+		.hashtags {
+			@media (min-width: @screen-sm) {
+				padding-top: 5.5em;
+				text-align: left;
+			}
+		}
+
+	}
+}

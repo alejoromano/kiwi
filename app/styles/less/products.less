@@ -1,13 +1,17 @@
+#products {
+	@media (min-width: @screen-sm) {
+		padding: 0;
+	}
+}
 #products #hero {
 	text-align: center;
 	background: url(../../images/products-hero.jpg) center center no-repeat;
-	background-size: auto 100%;
 	position: relative;
-	min-height: 48em;
+	min-height: 43.125em;
 	margin-bottom: 4em;
 
 	.inner-content {
-		padding: 8em 0;
+		padding: 8em 3.286em;
 	}
 	.square {
 		border: 0.286em solid @white;
@@ -18,7 +22,13 @@
 		left: 3em;
 	}
 	a.btn {
-		margin-top: 18em;
+		position: absolute;
+		bottom: 6em;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		width: 19em;
 	}
 }
 #products #products-wrapper {
@@ -38,13 +48,11 @@
 	background: @white;
 	width: 100%;
 	margin: 0;
-	
-	@media (min-width: @screen-sm) {
-		&:after {
-			content: "";
-			display: block;
-			padding-top: 100%;
-		}
+
+	&:after {
+		content: "";
+		display: block;
+		padding-top: 100.04%;
 	}
 
 	.triangle-container {
@@ -146,20 +154,13 @@
 		left: 0;
 	}
 	.caption {
-
-		@media (min-width: @screen-sm) {
-			position: absolute;
-			top: 50%;
-			width: 100%;
-		}
+		position: absolute;
+		top: 50%;
+		width: 100%;
 
 		h5 {
 			color: @dark-blue;
 			text-transform: uppercase;
-
-			@media (max-width: @screen-sm) {
-				font-size: 2.572em;
-			}
 		}
 		.product-name,
 		.product-color {
@@ -173,6 +174,7 @@
 		padding: 0;
 	}
 	&.special img {
+		min-width: 100%;
 		position: relative;
 		top: auto;
 	}

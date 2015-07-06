@@ -79,7 +79,7 @@ require([
 	'angular-touch',
 	'angular-ui-router',
 	'angular-bootstrap',
-	'angular-retina'
+	'angular-retina',
 	], function(angular, app, ngRoutes, ngCookies, ngSanitize, ngResource, ngAnimate, ngTouch, ngRetina) {
 	'use strict';
 	/* jshint ignore:start */
