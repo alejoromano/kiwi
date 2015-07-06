@@ -76,7 +76,8 @@ define(['angular', 'controllers/main', 'controllers/campaign', 'controllers/prod
 					abstract: true,
 					views: {
 						'top@': {
-							templateUrl: 'views/contact.html'
+							templateUrl: 'views/contact.html',
+							controller: 'ContactCtrl'
 						}
 					}
 				})
