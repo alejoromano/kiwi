@@ -32,6 +32,8 @@
     "jasmine": true,
     "spyOn": false,
     "angular": false,
+    "$": false,
+    "jQuery": false,
     /* AMD */
     "define": false,
     /* Custom */

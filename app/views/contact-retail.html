@@ -1,37 +1,141 @@
-<form class="form-horizontal" action="">
-	<div class="form-group form-group-lg">
+<form class="form-horizontal" role="form" name="retailForm" novalidate ng-submit="retailForm.$valid && submit(retailForm)">
+	<div class="form-group form-group-lg" ng-class="{'valid':retailForm.userName.$valid}">
 		<label for="inputName" class="col-sm-4 control-label">Nombre y Apellido</label>
 		<div class="col-sm-5">
-			<input type="text" class="form-control" id="inputName">
+			<input
+				type="text"
+				class="form-control"
+				id="inputName"
+				name="userName"
+				ng-model="user.name" 
+				placeholder="Nombre y Apellido&hellip;"
+				minlength="3"
+				required 
+				autofocus
+				>
+		</div>
+		<div class="col-sm-3 validation-display" ng-show="retailForm.userName.$error.required && retailForm.userName.$dirty">
+			<i class="fa fa-times"></i> requerido.
+		</div>
+		<div class="col-sm-3 validation-display" ng-show="retailForm.userName.$valid">
+			<i class="fa fa-check"></i>
 		</div>
 	</div>
-	<div class="form-group form-group-lg">
+	<div class="form-group form-group-lg" ng-class="{'valid':retailForm.userAddress.$valid,'invalid':retailForm.userAddress.$invalid && retailForm.userAddress.$dirty}">
 		<label for="inputAddress" class="col-sm-4 control-label">Dirección Completa <span class="help-block">calle, número, piso, departamento, ciudad, código postal</span></label>
-		<div class="col-sm-8">
-			<textarea class="form-control" rows="3" id="inputAddress"></textarea>
+		<div class="col-sm-7">
+			<textarea
+				class="form-control"
+				rows="4"
+				id="inputAddress"
+				name="userAddress"
+				ng-model="user.address" 
+				placeholder="Direcci&oacute;n&hellip;"
+				minlength="20"
+				required 
+				autofocus
+				></textarea>
+		</div>
+		<div class="col-sm-1 validation-display" ng-show="retailForm.userAddress.$error.required && retailForm.userAddress.$dirty">
+			<i class="fa fa-times"></i>
+		</div>
+		<div class="col-sm-1 validation-display" ng-show="retailForm.userAddress.$valid">
+			<i class="fa fa-check"></i>
 		</div>
 	</div>
-	<div class="form-group form-group-lg">
+	<div class="form-group form-group-lg" ng-class="{'valid':retailForm.userTelephone.$valid,'invalid':retailForm.userTelephone.$invalid && retailForm.userTelephone.$dirty}">
 		<label for="inputTelephone" class="col-sm-4 control-label">Teléfono</label>
 		<div class="col-sm-5">
-			<input type="text" class="form-control" id="inputTelephone">
+			<input
+				type="text"
+				class="form-control"
+				id="inputTelephone"
+				name="userTelephone"
+				ng-model="user.phone" 
+				placeholder="Tel&eacute;fono&hellip;"
+				ng-pattern="/^([+]?)+[0-9]+([-]?[0-9]+)+$/"
+				minlength="5"
+				required 
+				autofocus
+				>
+		</div>
+		<div class="col-sm-3 validation-display" ng-show="retailForm.userTelephone.$error.required && retailForm.userTelephone.$dirty">
+			<i class="fa fa-times"></i> requerido.
+		</div>
+		<div class="col-sm-3 validation-display" ng-show="retailForm.userTelephone.$error.minlength && retailForm.userTelephone.$dirty">
+			<i class="fa fa-times"></i> por lo menos 5 dígitos.
+		</div>
+		<div class="col-sm-3 validation-display" ng-show="retailForm.userTelephone.$error.pattern && retailForm.userTelephone.$dirty">
+			<i class="fa fa-times"></i> solo números, - y +.
+		</div>
+		<div class="col-sm-3 validation-display" ng-show="retailForm.userTelephone.$valid">
+			<i class="fa fa-check"></i>
 		</div>
 	</div>
-	<div class="form-group form-group-lg">
+	<div class="form-group form-group-lg" ng-class="{'valid':retailForm.userMail.$valid,'invalid':retailForm.userMail.$invalid && retailForm.userMail.$dirty}">
 		<label for="inputMail" class="col-sm-4 control-label">e-mail</label>
 		<div class="col-sm-5">
-			<input type="email" class="form-control" id="inputMail">
+			<input
+				type="email"
+				class="form-control"
+				id="inputMail"
+				name="userMail"
+				ng-model="user.mail"
+				placeholder="Correo Electr&oacute;nico&hellip;" 
+				required 
+				autofocus
+				>
+			<input
+				id="test-email"
+				type="email"
+				name="email"
+				ng-model="user.test"
+				>
+		</div>
+		<div class="col-sm-3 validation-display" ng-show="retailForm.userMail.$error.required && retailForm.userMail.$dirty">
+			<i class="fa fa-times"></i> requerido.
+		</div>
+		<div class="col-sm-3 validation-display" ng-show="retailForm.userMail.$error.email && retailForm.userMail.$dirty">
+			<i class="fa fa-times"></i> no es un email valido.
+		</div>
+		<div class="col-sm-3 validation-display" ng-show="retailForm.userMail.$valid">
+			<i class="fa fa-check"></i>
 		</div>
 	</div>
-	<div class="form-group form-group-lg">
-		<label for="inputProducts" class="col-sm-4 control-label">Producto/s</span></label>
-		<div class="col-sm-5">
-			<textarea class="form-control" rows="3" id="inputProducts"></textarea>
+	<div class="form-group form-group-lg" ng-class="{'valid':retailForm.userProducts.$valid}">
+		<label for="inputProducts" class="col-sm-4 control-label">Pedido/Consulta <span class="help-block">productos, cantidades, consultas en general</span></label>
+		<div class="col-sm-7">
+			<textarea
+				class="form-control"
+				rows="6"
+				id="inputProducts"
+				name="userProducts"
+				ng-model="user.products" 
+				placeholder="Productos&hellip;"
+				minlength="20"
+				required 
+				autofocus
+				></textarea>
+		</div>
+		<div class="col-sm-1 validation-display" ng-show="retailForm.userProducts.$error.required && retailForm.userProducts.$dirty">
+			<i class="fa fa-times"></i>
+		</div>
+		<div class="col-sm-1 validation-display" ng-show="retailForm.userProducts.$valid">
+			<i class="fa fa-check"></i>
 		</div>
 	</div>
 	<div class="form-group form-group-lg">
 		<div class="col-sm-offset-4 col-sm-5">
-			<button type="submit" class="btn btn-blue btn-block">Enviar</button>
+			<button
+				type="submit"
+				class="btn btn-blue btn-block"
+				ng-disabled="retailForm.$invalid || submitButtonDisabled"
+				>Enviar</button>
+		</div>
+	</div>
+	<div class="form-group form-group-lg">
+		<div class="col-sm-12">
+			<div class="message" ng-class="result">{{ resultMessage }}</div>
 		</div>
 	</div>
 </form>

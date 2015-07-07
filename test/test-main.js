@@ -14,6 +14,7 @@ requirejs.config({
 
     paths: {
 		angular: '../../bower_components/angular/angular',
+		jquery: '../../bower_components/jquery/dist/jquery.min',
 		'angular-animate': '../../bower_components/angular-animate/angular-animate',
 		'angular-cookies': '../../bower_components/angular-cookies/angular-cookies',
 		'angular-mocks': '../../bower_components/angular-mocks/angular-mocks',

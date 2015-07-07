@@ -1,49 +1,185 @@
-<form class="form-horizontal" action="">
-	<div class="form-group form-group-lg">
+<form class="form-horizontal" role="form" name="wholesaleForm" novalidate ng-submit="wholesaleForm.$valid && submit(wholesaleForm)">
+	<div class="form-group form-group-lg" ng-class="{'valid':wholesaleForm.userName.$valid}">
 		<label for="inputName" class="col-sm-4 control-label">Nombre de la Tienda</label>
 		<div class="col-sm-5">
-			<input type="text" class="form-control" id="inputName">
+			<input
+				type="text"
+				class="form-control"
+				id="inputName"
+				name="userName"
+				ng-model="user.name" 
+				placeholder="Nombre de la Tienda&hellip;"
+				minlength="3"
+				required 
+				autofocus
+				>
+		</div>
+		<div class="col-sm-3 validation-display" ng-show="wholesaleForm.userName.$error.required && wholesaleForm.userName.$dirty">
+			<i class="fa fa-times"></i> requerido.
+		</div>
+		<div class="col-sm-3 validation-display" ng-show="wholesaleForm.userName.$valid">
+			<i class="fa fa-check"></i>
 		</div>
 	</div>
-	<div class="form-group form-group-lg">
+	<div class="form-group form-group-lg" ng-class="{'valid':wholesaleForm.userCity.$valid}">
 		<label for="inputName" class="col-sm-4 control-label">Ciudad donde se encuentra</label>
 		<div class="col-sm-5">
-			<input type="text" class="form-control" id="inputCity">
+			<input
+				type="text"
+				class="form-control"
+				id="inputName"
+				name="userCity"
+				ng-model="user.city" 
+				placeholder="Ciudad&hellip;"
+				minlength="3"
+				required 
+				autofocus
+				>
+		</div>
+		<div class="col-sm-3 validation-display" ng-show="wholesaleForm.userCity.$error.required && wholesaleForm.userCity.$dirty">
+			<i class="fa fa-times"></i> requerido.
+		</div>
+		<div class="col-sm-3 validation-display" ng-show="wholesaleForm.userCity.$valid">
+			<i class="fa fa-check"></i>
 		</div>
 	</div>
-	<div class="form-group form-group-lg">
+	<div class="form-group form-group-lg" ng-class="{'valid':wholesaleForm.userWebsite.$valid}">
 		<label for="inputName" class="col-sm-4 control-label">Sitio Web</label>
 		<div class="col-sm-5">
-			<input type="text" class="form-control" id="inputSite">
+			<input
+				type="text"
+				class="form-control"
+				id="inputName"
+				name="userWebsite"
+				ng-model="user.website" 
+				placeholder="http://www&hellip;"
+				minlength="3"
+				required 
+				autofocus
+				>
+		</div>
+		<div class="col-sm-3 validation-display" ng-show="wholesaleForm.userWebsite.$error.required && wholesaleForm.userWebsite.$dirty">
+			<i class="fa fa-times"></i> requerido.
+		</div>
+		<div class="col-sm-3 validation-display" ng-show="wholesaleForm.userWebsite.$valid">
+			<i class="fa fa-check"></i>
 		</div>
 	</div>
-	<div class="form-group form-group-lg">
+	<div class="form-group form-group-lg" ng-class="{'valid':wholesaleForm.userAddress.$valid,'invalid':wholesaleForm.userAddress.$invalid && wholesaleForm.userAddress.$dirty}">
 		<label for="inputAddress" class="col-sm-4 control-label">Dirección Completa <span class="help-block">calle, número, piso, departamento, ciudad, código postal</span></label>
-		<div class="col-sm-8">
-			<textarea class="form-control" rows="3" id="inputAddress"></textarea>
+		<div class="col-sm-7">
+			<textarea
+				class="form-control"
+				rows="4"
+				id="inputAddress"
+				name="userAddress"
+				ng-model="user.address" 
+				placeholder="Direcci&oacute;n&hellip;"
+				minlength="20"
+				required 
+				autofocus
+				></textarea>
+		</div>
+		<div class="col-sm-1 validation-display" ng-show="wholesaleForm.userAddress.$error.required && wholesaleForm.userAddress.$dirty">
+			<i class="fa fa-times"></i>
+		</div>
+		<div class="col-sm-1 validation-display" ng-show="wholesaleForm.userAddress.$valid">
+			<i class="fa fa-check"></i>
 		</div>
 	</div>
-	<div class="form-group form-group-lg">
+	<div class="form-group form-group-lg" ng-class="{'valid':wholesaleForm.userTelephone.$valid,'invalid':wholesaleForm.userTelephone.$invalid && wholesaleForm.userTelephone.$dirty}">
 		<label for="inputTelephone" class="col-sm-4 control-label">Teléfono</label>
 		<div class="col-sm-5">
-			<input type="text" class="form-control" id="inputTelephone">
+			<input
+				type="text"
+				class="form-control"
+				id="inputTelephone"
+				name="userTelephone"
+				ng-model="user.phone" 
+				placeholder="Tel&eacute;fono&hellip;"
+				ng-pattern="/^([+]?)+[0-9]+([-]?[0-9]+)+$/"
+				minlength="5"
+				required 
+				autofocus
+				>
+		</div>
+		<div class="col-sm-3 validation-display" ng-show="wholesaleForm.userTelephone.$error.required && wholesaleForm.userTelephone.$dirty">
+			<i class="fa fa-times"></i> requerido.
+		</div>
+		<div class="col-sm-3 validation-display" ng-show="wholesaleForm.userTelephone.$error.minlength && wholesaleForm.userTelephone.$dirty">
+			<i class="fa fa-times"></i> por lo menos 5 dígitos.
+		</div>
+		<div class="col-sm-3 validation-display" ng-show="wholesaleForm.userTelephone.$error.pattern && wholesaleForm.userTelephone.$dirty">
+			<i class="fa fa-times"></i> solo números, - y +.
+		</div>
+		<div class="col-sm-3 validation-display" ng-show="wholesaleForm.userTelephone.$valid">
+			<i class="fa fa-check"></i>
 		</div>
 	</div>
-	<div class="form-group form-group-lg">
+	<div class="form-group form-group-lg" ng-class="{'valid':wholesaleForm.userMail.$valid,'invalid':wholesaleForm.userMail.$invalid && wholesaleForm.userMail.$dirty}">
 		<label for="inputMail" class="col-sm-4 control-label">e-mail</label>
 		<div class="col-sm-5">
-			<input type="email" class="form-control" id="inputMail">
+			<input
+				type="email"
+				class="form-control"
+				id="inputMail"
+				name="userMail"
+				ng-model="user.mail"
+				placeholder="Correo Electr&oacute;nico&hellip;" 
+				required 
+				autofocus
+				>
+			<input
+				id="test-email"
+				type="email"
+				name="email"
+				ng-model="user.test"
+				>
+		</div>
+		<div class="col-sm-3 validation-display" ng-show="wholesaleForm.userMail.$error.required && wholesaleForm.userMail.$dirty">
+			<i class="fa fa-times"></i> requerido.
+		</div>
+		<div class="col-sm-3 validation-display" ng-show="wholesaleForm.userMail.$error.email && wholesaleForm.userMail.$dirty">
+			<i class="fa fa-times"></i> no es un email valido.
+		</div>
+		<div class="col-sm-3 validation-display" ng-show="wholesaleForm.userMail.$valid">
+			<i class="fa fa-check"></i>
 		</div>
 	</div>
-	<div class="form-group form-group-lg">
-		<label for="inputProducts" class="col-sm-4 control-label">Producto/s</span></label>
-		<div class="col-sm-5">
-			<textarea class="form-control" rows="3" id="inputProducts"></textarea>
+	<div class="form-group form-group-lg" ng-class="{'valid':wholesaleForm.userProducts.$valid}">
+		<label for="inputProducts" class="col-sm-4 control-label">Pedido/Consulta <span class="help-block">nombre de contacto, productos, cantidades, consultas en general</span></label>
+		<div class="col-sm-7">
+			<textarea
+				class="form-control"
+				rows="6"
+				id="inputProducts"
+				name="userProducts"
+				ng-model="user.products" 
+				placeholder="Productos&hellip;"
+				minlength="20"
+				required 
+				autofocus
+				></textarea>
+		</div>
+		<div class="col-sm-1 validation-display" ng-show="wholesaleForm.userProducts.$error.required && wholesaleForm.userProducts.$dirty">
+			<i class="fa fa-times"></i>
+		</div>
+		<div class="col-sm-1 validation-display" ng-show="wholesaleForm.userProducts.$valid">
+			<i class="fa fa-check"></i>
 		</div>
 	</div>
 	<div class="form-group form-group-lg">
 		<div class="col-sm-offset-4 col-sm-5">
-			<button type="submit" class="btn btn-blue btn-block">Enviar</button>
+			<button
+				type="submit"
+				class="btn btn-blue btn-block"
+				ng-disabled="wholesaleForm.$invalid || submitButtonDisabled"
+				>Enviar</button>
+		</div>
+	</div>
+	<div class="form-group form-group-lg">
+		<div class="col-sm-12">
+			<div class="message" ng-class="result">{{ resultMessage }}</div>
 		</div>
 	</div>
 </form>

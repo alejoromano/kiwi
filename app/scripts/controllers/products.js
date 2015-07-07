@@ -26,7 +26,7 @@ define(['angular'], function (angular) {
 			},
 			{	'id':'INV15-071',
 				'special': true,
-				'name':'Bolso',
+				'name':'Bolsa Fiji',
 				'img':'INV15-071.jpg',
 				'color':'Natural/Azul/Rojo',
 				'bk': [
@@ -38,7 +38,7 @@ define(['angular'], function (angular) {
 			},
 			{	'id':'INV15-027',
 				'special': false,
-				'name':'Morral',
+				'name':'Morral Papua',
 				'img':'INV15-027.png',
 				'color':'Camel/Negro',
 				'bk': [
@@ -50,7 +50,7 @@ define(['angular'], function (angular) {
 			},
 			{	'id':'INV15-005',
 				'special': false,
-				'name':'Mochila',
+				'name':'Mochila Samoa',
 				'img':'INV15-005.png',
 				'color':'Azul/Blanco',
 				'bk': [
@@ -62,7 +62,7 @@ define(['angular'], function (angular) {
 			},
 			{	'id':'INV15-019',
 				'special': false,
-				'name':'Bolso',
+				'name':'Cartera Guinea',
 				'img':'INV15-019.png',
 				'color':'Borravino/Magenta',
 				'bk': [
@@ -74,7 +74,7 @@ define(['angular'], function (angular) {
 			},
 			{	'id':'INV15-003',
 				'special': false,
-				'name':'Mochila',
+				'name':'Mochila Samoa',
 				'img':'INV15-003.png',
 				'color':'Negro/Blanco',
 				'bk': [
@@ -86,7 +86,7 @@ define(['angular'], function (angular) {
 			},
 			{	'id':'INV15-020',
 				'special': false,
-				'name':'Bolso',
+				'name':'Cartera Guinea',
 				'img':'INV15-020.png',
 				'color':'Negro/Camel',
 				'bk': [
@@ -98,7 +98,7 @@ define(['angular'], function (angular) {
 			},
 			{	'id':'INV15-042',
 				'special': true,
-				'name':'Bolso',
+				'name':'Bolso Polinesia',
 				'img':'INV15-042.jpg',
 				'color':'Azul/Magenta',
 				'bk': [
@@ -112,7 +112,7 @@ define(['angular'], function (angular) {
 				'special': false,
 				'name':'Neceser',
 				'img':'INV15-078.png',
-				'color':'Yema/Negro',
+				'color':'Naranja/Negro',
 				'bk': [
 					{'pos':'top','clr':'red'},
 					{'pos':'right','clr':'blue'},
@@ -122,7 +122,7 @@ define(['angular'], function (angular) {
 			},
 			{	'id':'INV15-025',
 				'special': false,
-				'name':'Morral',
+				'name':'Morral Papua',
 				'img':'INV15-025.png',
 				'color':'Negro/Blanco',
 				'bk': [
@@ -134,7 +134,7 @@ define(['angular'], function (angular) {
 			},
 			{	'id':'INV15-033',
 				'special': false,
-				'name':'Bolso',
+				'name':'Bolso Polinesia',
 				'img':'INV15-033.png',
 				'color':'Negro/Blanco',
 				'bk': [
@@ -146,7 +146,7 @@ define(['angular'], function (angular) {
 			},			
 			{	'id':'INV15-037',
 				'special': false,
-				'name':'Bolso',
+				'name':'Bolso Polinesia',
 				'img':'INV15-037.png',
 				'color':'Borravino/Negro',
 				'bk': [
@@ -159,9 +159,9 @@ define(['angular'], function (angular) {
 
 			{	'id':'INV15-073',
 				'special': false,
-				'name':'Bolso',
+				'name':'Bolsa Fiji',
 				'img':'INV15-073.png',
-				'color':'Mostaza/Negro',
+				'color':'Naranja/Negro',
 				'bk': [
 					{'pos':'top','clr':'red'},
 					{'pos':'right','clr':'pink'},
@@ -171,7 +171,7 @@ define(['angular'], function (angular) {
 			},
 			{	'id':'INV15-076',
 				'special': false,
-				'name':'Bolso',
+				'name':'Bolsa Fiji',
 				'img':'INV15-076.png',
 				'color':'Oliva/Negro',
 				'bk': [

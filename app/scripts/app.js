@@ -28,7 +28,7 @@ define(['angular', 'controllers/main', 'controllers/campaign', 'controllers/prod
 			'ngTouch',
 			'ui.router',
 			'ui.bootstrap',
-			'ngRetina'
+			'ngRetina',
 		])
 		.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 			// For any unmatched url, redirect to /state1
@@ -89,4 +89,4 @@ define(['angular', 'controllers/main', 'controllers/campaign', 'controllers/prod
 					templateUrl: 'views/contact-wholesale.html'
 				});
 		});
-});
+	});

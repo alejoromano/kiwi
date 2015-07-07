@@ -19,6 +19,8 @@
   "smarttabs": true,
   "globals": {
     "angular": false,
+    "$": false,
+    "jQuery": false,
     /* AMD */
     "define": false,
     /* Custom */

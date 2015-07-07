@@ -2,6 +2,7 @@
 require.config({
 	paths: {
 		angular: '../../bower_components/angular/angular',
+		jquery: '../../bower_components/jquery/dist/jquery.min',
 		'angular-animate': '../../bower_components/angular-animate/angular-animate',
 		'angular-cookies': '../../bower_components/angular-cookies/angular-cookies',
 		'angular-mocks': '../../bower_components/angular-mocks/angular-mocks',
@@ -15,6 +16,9 @@ require.config({
 	},
 	shim: {
 		angular: {
+			deps: [
+				'jquery'
+			],
 			exports: 'angular'
 		},
 		'angular-ui-router': {
@@ -79,7 +83,7 @@ require([
 	'angular-touch',
 	'angular-ui-router',
 	'angular-bootstrap',
-	'angular-retina',
+	'angular-retina'
 	], function(angular, app, ngRoutes, ngCookies, ngSanitize, ngResource, ngAnimate, ngTouch, ngRetina) {
 	'use strict';
 	/* jshint ignore:start */
