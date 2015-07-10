@@ -12,7 +12,7 @@
 	</div>
 	<section id="products-wrapper">
 		<div class="row">
-			<div class="col-xs-6 col-sm-4 col-md-3" ng-repeat-start="product in products">
+			<div class="col-xs-6 col-sm-4 col-md-3" ng-repeat="product in products">
 				<div class="thumbnail" ng-if="!product.special">
 					<div class="triangle-container">
 						<div ng-repeat="triangle in product.bk" class="triangle {{triangle.pos}} {{triangle.clr}}"></div>
@@ -34,7 +34,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-xs-12 col-sm-8 col-md-6" ng-if="( $index + 1 ) % 8 == 0" ng-repeat-end>
+			<!--div class="col-xs-12 col-sm-8 col-md-6" ng-if="( $index + 1 ) % 8 == 0" ng-repeat-end>
 				<div class="insert">
 					<div class="insert-content">
 						<div class="square">
@@ -43,7 +43,7 @@
 						<img ng-src="/images/product-insert-deer.png" alt="Un ciervito">
 					</div>
 				</div>
-			</div>
+			</div-->
 		</div>
 	</section>
 </div>
